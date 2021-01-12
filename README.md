@@ -10,3 +10,6 @@ what is the difference between shadow dom and virtual dom?
 
 what is react fiber?
 -  fiber is  the reconciliation engine. the goal of react fiber is  to increase its suitability for areas like animation, layout, and gestures. Its headline feature is incremental rendering: the ability to split rendering work into chunks and spread it out over multiple frames.
+what are controlled component?
+-a component that control that input elements within the froms on subsequent user input is called controlled component.ie,
+that is every state mutation will have an associated handler function.
