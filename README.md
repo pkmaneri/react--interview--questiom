@@ -13,3 +13,33 @@ what is react fiber?
 what are controlled component?
 -a component that control that input elements within the froms on subsequent user input is called controlled component.ie,
 that is every state mutation will have an associated handler function.
+
+What are uncontrolled components?
+-the Uncontrolled Components are the ones that store their own state internally, and you query the DOM using a ref to find its current value when you need it. This is a bit more like traditional HTML.
+
+What is the difference between createElement and cloneElement?
+-JSX elements will be transpiled to React.createElement() functions to create React elements which are going to be used for the object representation of UI. Whereas cloneElement is used to clone an element and pass it new props.
+
+What is Lifting State Up in React?
+-when the several components need to share the some change data thet is a recommended to lift the shared state up to their closest common ancestor.That means if two child components share the same data from its parent, then move the state to parent instead of maintaining local state in both of the child components.
+
+What are the different phases of component lifecycle?
+The component lifecycle has three distinct lifecycle phases:
+
+Mounting: The component is ready to mount in the browser DOM. This phase covers initialization from constructor(), getDerivedStateFromProps(), render(), and componentDidMount() lifecycle methods.
+
+Updating: In this phase, the component get updated in two ways, sending the new props and updating the state either from setState() or forceUpdate(). This phase covers getDerivedStateFromProps(), shouldComponentUpdate(), render(), getSnapshotBeforeUpdate() and componentDidUpdate() lifecycle methods.
+
+Unmounting: In this last phase, the component is not needed and get unmounted from the browser DOM. This phase includes componentWillUnmount() lifecycle method.
+
+It's worth mentioning that React internally has a concept of phases when applying changes to the DOM. They are separated as follows
+
+Render The component will render without any side-effects. This applies for Pure components and in this phase, React can pause, abort, or restart the render.
+
+Pre-commit Before the component actually applies the changes to the DOM, there is a moment that allows React to read from the DOM through the getSnapshotBeforeUpdate().
+
+Commit React works with the DOM and executes the final lifecycles respectively componentDidMount() for mounting, componentDidUpdate() for updating, and componentWillUnmount() for unmounting.
+
+
+
+
