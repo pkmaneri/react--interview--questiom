@@ -40,6 +40,17 @@ Pre-commit Before the component actually applies the changes to the DOM, there i
 
 Commit React works with the DOM and executes the final lifecycles respectively componentDidMount() for mounting, componentDidUpdate() for updating, and componentWillUnmount() for unmounting.
 
+ explain the purpose of render() in react.
+- every component in render(),should be pure component,it return  single react element which is represent to react native dom, html element inside render() must be enclose by encolose tag like <from>,<div> ,<grou> etc.
+  
+  explain props in react.
+  -props are short of properties. only read only, are pure i.e immutable ,always pass-down parent to child component,used to render dynamic data.
+  
+  how can you update state in react component?
+  - using this.setState() you can change in state of the component.
+  
+  what is arrow function? how to used.
+  -also called fat arrow function(=>), allow to bind to context components proporly auto binding is not avialable by defaults in Es6,make to easy hoc function.
 
 
 
