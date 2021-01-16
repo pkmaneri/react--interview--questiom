@@ -52,5 +52,42 @@ Commit React works with the DOM and executes the final lifecycles respectively c
   what is arrow function? how to used.
   -also called fat arrow function(=>), allow to bind to context components proporly auto binding is not avialable by defaults in Es6,make to easy hoc function.
 
+What are the recommended ways for static type checking?
+-Normally we use PropTypes library (React.PropTypes moved to a prop-types package since React v15.5) for type checking in the React applications. For large code bases, it is recommended to use static type checkers such as Flow or TypeScript, that perform type checking at compile time and provide auto-completion features.
+
+What is the use of react-dom package?
+-The react-dom package provides DOM-specific methods that can be used at the top level of your app. Most of the components are not required to use this module. Some of the methods of this package are:
+
+render()
+hydrate()
+unmountComponentAtNode()
+findDOMNode()
+createPortal()
+
+What is ReactDOMServer?
+-The ReactDOMServer object enables you to render components to static markup (typically used on node server). This object is mainly used for server-side rendering (SSR). The following methods can be used in both the server and browser environments:
+
+renderToString()
+renderToStaticMarkup()
+For example, you generally run a Node-based web server like Express, Hapi, or Koa, and you call renderToString to render your root component to a string, which you then send as response.
+
+How to use innerHTML in React?
+-The dangerouslySetInnerHTML attribute is React's replacement for using innerHTML in the browser DOM. Just like innerHTML, it is risky to use this attribute considering cross-site scripting (XSS) attacks. You just need to pass a __html object as key and HTML text as value.
+
+In this example MyComponent uses dangerouslySetInnerHTML attribute for setting HTML markup:
+
+function createMarkup() {
+  return { __html: 'First &middot; Second' }
+}
+
+function MyComponent() {
+  return <div dangerouslySetInnerHTML={createMarkup()} />
+}
+
+How events are different in React?
+-Handling events in React elements has some syntactic differences:
+
+React event handlers are named using camelCase, rather than lowercase.
+With JSX you pass a function as the event handler, rather than a string.
 
 
