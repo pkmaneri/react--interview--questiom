@@ -1,4 +1,7 @@
 # react--interview--questiom
+why need a react?
+-React allows developers to create large web applications that can change data, without reloading the page. The main purpose of React is to be fast, scalable, and simple. It works only on user interfaces in the application. This corresponds to the view in the MVC template.
+
 how virtual dom works? 
 there are three simple steps 
 A-whenever any underlying data changes,the entire ui is re-rendered in virtual dom representation.
